@@ -1,0 +1,30 @@
+.color-swatch-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 149px;
+  height: 149px;
+  transition: transform 0.2s ease;
+  padding: 12px;
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.color-swatch-info {
+  color: #FFF;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px; 
+
+  &.dark {
+    color: #333333;
+  }
+}
+
+.color-swatch-name {
+  font-weight: 700;
+}
