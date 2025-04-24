@@ -1,0 +1,21 @@
+<h1 class="heading1 pt-4 pb-4" style="color: #4A7390; font-size: 48px;">Threaded Messages</h1>
+<willow-typography [variant]="type.Body">
+  <p>Use this component for multi-party conversations.</p>
+</willow-typography>
+
+<div class="demo-area">
+  <willow-typography style="color: #4B4C4D" [variant]="type.Heading2">Component Demo</willow-typography>
+  <div class="reply-area">
+      <button class="reply-button" *ngIf="!showReplyForm" (click)="toggleReplyForm()">Reply</button>
+      <div class="reply-form" *ngIf="showReplyForm">
+          <willow-typography [variant]="type.Body" style="font-weight: 500; margin-top: 16px; color: #4B4C4D">Your message:</willow-typography>
+          <textarea class="reply-textarea" [(ngModel)]="messageText"></textarea>
+          <willow-typography [variant]="type.Small" style="color: #4B4C4D">1,000 character limit</willow-typography>
+          <div class="form-actions">
+              <button class="reply-button" (click)="sendMessage()">Send</button>
+              <button class="reply-button-secondary" (click)="toggleReplyForm()">Cancel</button>
+          </div>
+      </div>
+  </div>
+  <willow-threaded-messages-list [messages]="messages"></willow-threaded-messages-list>
+</div>

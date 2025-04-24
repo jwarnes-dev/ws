@@ -1,0 +1,61 @@
+.reply-button {
+  width: 145px;
+  height: 52px;
+  border-radius: 2px;
+  padding: 12px 36px;
+  background-color: var(--component-button-willow-primary-dark-default-fill, #005589);
+  color: var(--component-button-willow-primary-dark-default-text, #FFFFFF);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  cursor: pointer;
+}
+.reply-button-secondary {
+  width: 145px;
+  height: 52px;
+  border-radius: 2px;
+  padding: 12px 36px;
+  color: var(--component-button-willow-primary-dark-default-fill, #005589);
+  background-color: var(--component-button-willow-primary-dark-default-text, #FFFFFF);
+  border: 2px solid var(--component-button-willow-primary-dark-default-fill, #005589);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.reply-textarea {
+  width: 933px;
+  height: 119px;
+  border-radius: 2px;
+  padding: 16px 20px;
+  border: 2px solid var(--component-forms-willow-field-default-stroke, #757575);
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+
+}
+.reply-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.demo-area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 16px;
+}
+.reply-area {
+  width: 933px;
+  margin: 16px 0;
+}
+.form-actions {
+  display: flex;
+  gap: 16px;
+}
+
