@@ -1,0 +1,45 @@
+<div class="willow-table-container">
+  <table [ngClass]="[
+    'willow-table',
+    'row-style-' + rowStyle,
+    'header-style-' + headerStyle,
+    'density-' + density
+  ]">
+    <thead>
+      <tr>
+        <th *ngFor="let column of columns" 
+            [ngStyle]="{'width': column.width ? column.width + 'px' : 'auto'}"
+            [ngClass]="{'sortable': isSortable(column)}"
+            (click)="sort(column)">
+          <div class="header-content">
+            {{ column.headerName }}
+            <div *ngIf="isSortable(column)" class="sort-icons">
+              <span class="sort-icon" [ngClass]="{
+                'sort-asc': sortField === column.field && sortDirection === 'asc',
+                'sort-desc': sortField === column.field && sortDirection === 'desc',
+                'sort-none': sortField !== column.field || sortDirection === null
+              }">
+                <ng-container *ngIf="sortField === column.field && sortDirection === 'asc'">
+                  <i class="sort-up"></i>
+                </ng-container>
+                <ng-container *ngIf="sortField === column.field && sortDirection === 'desc'">
+                  <i class="sort-down"></i>
+                </ng-container>
+                <ng-container *ngIf="sortField !== column.field || sortDirection === null">
+                  <i class="sort-both"></i>
+                </ng-container>
+              </span>
+            </div>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of sortedRows; let i = index" [ngClass]="{'odd': i % 2 !== 0}">
+        <td *ngFor="let column of columns">
+          {{ row[column.field] }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

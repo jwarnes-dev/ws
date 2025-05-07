@@ -10,3 +10,4 @@ export * from './lib/threaded-message/threaded-message.component';
 export * from './lib/threaded-messages-list/threaded-messages-list.component';
 export * from './lib/typography/typography.component';
 export * from './lib/color-swatch/color-swatch.component';
+export * from './lib/table/table.component';

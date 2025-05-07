@@ -6,6 +6,7 @@ import { ThreadedMessagesListComponent } from './threaded-messages-list/threaded
 import { UploadFormComponent } from './upload-form/upload-form.component';
 import { TypographyComponent } from './typography/typography.component';
 import { ColorSwatchComponent } from './color-swatch/color-swatch.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ColorSwatchComponent } from './color-swatch/color-swatch.component';
     ThreadedMessagesListComponent,
     UploadFormComponent,
     TypographyComponent,
-    ColorSwatchComponent
+    ColorSwatchComponent,
+    TableComponent
   ],
   imports: [
     CommonModule
@@ -24,7 +26,8 @@ import { ColorSwatchComponent } from './color-swatch/color-swatch.component';
     ThreadedMessagesListComponent,
     ThreadedMessageComponent,
     TypographyComponent,
-    ColorSwatchComponent
+    ColorSwatchComponent,
+    TableComponent
   ]
 })
 export class AngularWillowModule { }
