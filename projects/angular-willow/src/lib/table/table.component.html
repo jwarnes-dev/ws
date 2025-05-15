@@ -20,13 +20,13 @@
                 'sort-none': sortField !== column.field || sortDirection === null
               }">
                 <ng-container *ngIf="sortField === column.field && sortDirection === 'asc'">
-                  <i class="sort-up"></i>
+                  <i class="sort-up">^</i>
                 </ng-container>
                 <ng-container *ngIf="sortField === column.field && sortDirection === 'desc'">
-                  <i class="sort-down"></i>
+                  <i class="sort-down">v</i>
                 </ng-container>
                 <ng-container *ngIf="sortField !== column.field || sortDirection === null">
-                  <i class="sort-both"></i>
+                  <i class="sort-both">^v</i>
                 </ng-container>
               </span>
             </div>
