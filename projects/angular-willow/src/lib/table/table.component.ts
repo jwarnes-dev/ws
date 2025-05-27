@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+// FontAwesome icon imports for sort indicators
+import { faChevronUp, faChevronDown, faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
 
 export interface Column {
   field: string;
@@ -31,6 +33,14 @@ export class TableComponent implements OnInit {
   sortField: string | null = null;
   sortDirection: SortDirection = null;
   sortedRows: Row[] = [];
+
+  // Expose icons to template
+  faChevronUp = faChevronUp;
+  faChevronDown = faChevronDown;
+  faSort = faSort;
+  faSortUp = faSortUp;
+  faSortDown = faSortDown;
+  
 
   ngOnInit(): void {
     this.sortedRows = [...this.rows];

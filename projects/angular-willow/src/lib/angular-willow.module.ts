@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AngularWillowComponent } from './angular-willow.component';
 import { ThreadedMessageComponent } from './threaded-message/threaded-message.component';
 import { ThreadedMessagesListComponent } from './threaded-messages-list/threaded-messages-list.component';
@@ -19,7 +20,8 @@ import { TableComponent } from './table/table.component';
     TableComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FontAwesomeModule
   ],
   exports: [
     AngularWillowComponent,
@@ -27,7 +29,8 @@ import { TableComponent } from './table/table.component';
     ThreadedMessageComponent,
     TypographyComponent,
     ColorSwatchComponent,
-    TableComponent
+    TableComponent,
+    FontAwesomeModule
   ]
 })
 export class AngularWillowModule { }
