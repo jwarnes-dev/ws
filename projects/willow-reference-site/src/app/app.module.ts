@@ -12,6 +12,7 @@ import { ThreadedMessagesPageComponent } from './pages/threaded-messages-page/th
 import { AboutpageComponent } from './pages/aboutpage/aboutpage.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { StartpageComponent } from './pages/startpage/startpage.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StartpageComponent } from './pages/startpage/startpage.component';
     ThreadedMessagesPageComponent,
     AboutpageComponent,
     TablesComponent,
-    StartpageComponent
+    StartpageComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

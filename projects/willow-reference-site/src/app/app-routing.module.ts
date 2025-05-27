@@ -7,6 +7,7 @@ import { ThreadedMessagesPageComponent } from './pages/threaded-messages-page/th
 import { AboutpageComponent } from './pages/aboutpage/aboutpage.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { StartpageComponent } from './pages/startpage/startpage.component';
+import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
       { path: 'threaded-messages', component: ThreadedMessagesPageComponent },
       { path: 'about', component: AboutpageComponent },
       { path: 'tables', component: TablesComponent },
-      { path: 'start', component: StartpageComponent }
+      { path: 'start', component: StartpageComponent },
+      { path: 'home', component: HomeComponent }
     ]
   }
 ];
