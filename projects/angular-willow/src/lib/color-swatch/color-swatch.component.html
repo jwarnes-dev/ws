@@ -1,0 +1,11 @@
+<div 
+ class="color-swatch-container"
+ [style.background-color]="color">
+  <div class="color-swatch-info" [class.dark]="dark">
+    <div class="color-swatch-name">{{ name }}</div>
+    <div>{{ color }}</div>
+  </div>
+</div> 
+<div class="color-swatch-use-cases d-flex flex-column">
+  <ng-content></ng-content>
+</div>

@@ -1,0 +1,46 @@
+<h1 class="heading1 pt-4 pb-4" style="color: #4A7390; font-size: 48px;">Tables</h1>
+<willow-typography [variant]="type.Body">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</willow-typography>
+
+<div class="container-fluid mt-4">
+  <!-- Basic Table with Lines -->
+  <div class="mb-5">
+    <willow-typography [variant]="type.Heading2">Basic Table with Divider Lines</willow-typography>
+    <willow-table class="mt-4"
+      [columns]="columns"
+      [rows]="rows"
+      rowStyle="lines"
+      headerStyle="basic"
+      density="normal">
+    </willow-table>
+  </div>
+
+  <!-- Striped Table with Heavy Header -->
+  <div class="mb-5">
+    <willow-typography class="mb-2" [variant]="type.Heading2">Striped Table with Emphasized Header</willow-typography>
+    <willow-typography class="mb-3" [variant]="type.Body">
+    </willow-typography>
+    <willow-table
+      [columns]="columns"
+      [rows]="rows"
+      rowStyle="stripes"
+      headerStyle="heavy"
+      density="normal">
+    </willow-table>
+  </div>
+
+  <!-- Condensed Table -->
+  <div class="mb-5">
+    <willow-typography class="mb-2" [variant]="type.Heading2">Condensed Table</willow-typography>
+    <willow-typography class="mb-3" [variant]="type.Body">
+    </willow-typography>
+    <willow-table
+      [columns]="columns"
+      [rows]="rows"
+      rowStyle="stripes"
+      headerStyle="basic"
+      density="condensed">
+    </willow-table>
+  </div>
+</div> 

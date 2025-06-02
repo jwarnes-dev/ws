@@ -1,0 +1,81 @@
+@import url("https://use.typekit.net/gyb2xiw.css");
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@500&family=Lato:ital,wght@0,100;0,400;0,900;1,100&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-willow-gray-400: #C2C2C3;
+    --color-willow-blue---super-light: #F3F9FF;
+    --color-willow-blue: #4A7390;
+    --text-Willow-color-gray: #4B4C4D;
+    --text-Willow-color-blue: #4A7390;
+    --text-Willow-color-link: #005589;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+.nav-title-header, .nav-header, a {
+  color: rgba(75, 76, 77, 1);
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  font-style: Medium;
+  letter-spacing: 0px;
+  text-align: left;
+  line-height: 20px;
+  text-decoration:none;
+}
+
+.nav-title {
+color: rgba(75, 76, 77, 1);
+font-family: "Museo-Slab";
+font-size: 32px;
+font-weight: 600;
+font-style: 700;
+letter-spacing: 0px;
+text-align: left;
+line-height: 36px;
+}
+.nav-logo {
+  margin-top: 32px;
+  margin-left: 44px;
+}
+
+.willow-nav {
+  margin-left: 44px;
+  margin-top: 21px;
+}
+.nav-link {
+  color: var(--text-Willow-color-link, #005589);
+  font-feature-settings: 'liga' off, 'clig' off;
+  font-family: var(--text-family-body, 'Roboto');
+  font-size: var(--text-size-hidden-xs, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--text-line-height-hidden-m, 24px); 
+  text-decoration: underline;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;  
+}
+
+.view-container {
+  max-width: 1200px;
+  padding-left: 40px !important;
+}
+
+a.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.title-banner-condensed, h1 {
+  background: linear-gradient(90deg, rgba(73,115,144,1) 55%, rgba (73,115,144,1) 77%, rgba(166, 198,221,1) 100%);
+  padding: 72px 52px;
+  color:white;
+
+}

@@ -1,0 +1,173 @@
+<h1 class="heading1 pt-4 pb-4" style="color: #4A7390; font-size: 48px;">Colors</h1>
+<willow-typography [variant]="type.Body">
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+</willow-typography>
+
+<div class="container-fluid mt-4">
+  <willow-typography class="mb-3" [variant]="type.Heading1">Primary</willow-typography>
+  <div class="mb-5 mt-3 d-flex gap-4">
+
+      <willow-color-swatch color="#4A7390" name="Primary 675" >
+        <willow-typography [variant]="type.Small">Logo</willow-typography>
+        <willow-typography [variant]="type.Small">Button Background</willow-typography>
+        <willow-typography [variant]="type.Small">Links</willow-typography>
+        <willow-typography [variant]="type.Small">Button Text</willow-typography>
+      </willow-color-swatch>
+
+      <willow-color-swatch 
+        color="#6495B8" 
+        name="Blue 550" >
+        <willow-typography [variant]="type.Small">Header Text</willow-typography>
+        <willow-typography [variant]="type.Small">Section Background</willow-typography>
+      </willow-color-swatch>
+
+      <willow-color-swatch 
+        color="#A6C2D8" 
+        name="Blue 100" >
+        <willow-typography [variant]="type.Small">Section Background</willow-typography>
+      </willow-color-swatch>
+
+      <willow-color-swatch 
+        color="#F3F9FF" 
+        name="Blue 50"
+        [dark]="true" >
+        <willow-typography [variant]="type.Small">Section Background</willow-typography>
+      </willow-color-swatch>
+      
+      <willow-color-swatch 
+      color="#335066" 
+      name="Primary 775" >
+      <willow-typography [variant]="type.Small">Primary Hover</willow-typography>
+    </willow-color-swatch>
+  </div>
+
+  <willow-typography class="mb-3" [variant]="type.Heading1">Greyscale</willow-typography>
+  <div class="mb-5 mt-3 d-flex gap-4">
+
+    <willow-color-swatch color="#4D4D4F" name="Grey 700" >
+      <willow-typography [variant]="type.Small">Body Text</willow-typography>
+      <willow-typography [variant]="type.Small">Header Text</willow-typography>
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#757575" 
+      name="Grey 550" >
+      <willow-typography [variant]="type.Small">Placeholder Text </willow-typography>
+      <willow-typography [variant]="type.Small">Inactive Text</willow-typography>
+      <willow-typography [variant]="type.Small">Input Borders </willow-typography>
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#C2C2C3" 
+      name="Grey 225" >
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#F2F2F3" 
+      name="Gray 100"
+      [dark]="true" >
+      <willow-typography [variant]="type.Small">Section Background</willow-typography>
+    </willow-color-swatch>
+    
+  </div>
+
+  <willow-typography class="mb-3" [variant]="type.Heading1">Secondary</willow-typography>
+  <div class="mb-5 mt-3 d-flex gap-4">
+
+    <willow-color-swatch color="#A3595D" name="Coral - Dark" >
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#C77677" 
+      name="Coral" >
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#7F4D24" 
+      name="Tan - Dark" >
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#A66E3F" 
+      name="Tan">
+    </willow-color-swatch>
+    
+  </div>
+  <div class="mb-5 d-flex gap-4">
+
+    <willow-color-swatch color="#7E678E" name="Lilac - Dark" >
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#A58EB4" 
+      name="Lilac" >
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#447D83" 
+      name="Teal - Dark" >
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#7AB7C1" 
+      name="Teal">
+    </willow-color-swatch>
+    
+  </div>
+
+  <willow-typography [variant]="type.Heading1">Status</willow-typography>
+  <div class="mb-5 mt-3 d-flex gap-4">
+
+    <willow-color-swatch color="#862F2F" name="Red 675" >
+      <willow-typography [variant]="type.Small">Error Button Hover</willow-typography>
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#B44242" 
+      name="Red 550" >
+      <willow-typography [variant]="type.Small">Error</willow-typography>
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#FFF5F5" 
+      name="Red 50" 
+      [dark]="true">
+      <willow-typography [variant]="type.Small">Error Background</willow-typography>
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#E45F0C" 
+      name="Orange 450" >
+      <willow-typography [variant]="type.Small">Focus Indicator</willow-typography>
+    </willow-color-swatch>
+
+  </div>
+  <div class="d-flex gap-4">
+
+    <willow-color-swatch color="#4E735D" name="Green 550" >
+      <willow-typography [variant]="type.Small">Success</willow-typography>
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      name="Green 50"
+      color="#F0F6EF"
+      [dark]="true">
+      <willow-typography [variant]="type.Small">Success Background</willow-typography>
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#FFDD95" 
+      name="Yellow 225" 
+      [dark]="true">
+      <willow-typography [variant]="type.Small">Warning</willow-typography>
+    </willow-color-swatch>
+
+    <willow-color-swatch 
+      color="#FFFAEE" 
+      name="Yellow 50"
+      [dark]="true">
+      <willow-typography [variant]="type.Small">Warning Background</willow-typography>
+    </willow-color-swatch>
+    
+  </div>
+</div> 

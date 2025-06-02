@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-auto sidebar" style="width: 345px; min-height: 100vh; border-right: 1px solid #dee2e6;">
+      <div class="py-4">
+        <div class="nav-logo">
+          <a href="/home">
+            <div class="nav-title-header">Design System</div>
+            <div class="nav-title">Willow</div>
+          </a>
+         
+        </div>
+        <nav class="willow-nav flex-column">
+          <div class="nav-header">Developers</div>
+          <a class="nav-link" routerLink="/start">Getting Started</a>
+          <a class="disabled nav-link" routerLink="/contribute">Contribute</a>
+
+          <div class="nav-header pt-4">Foundation</div>
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+          <a class="nav-link" routerLink="/typography">Typography</a>
+          <a class="nav-link" routerLink="/colors">Colors</a>
+          <a class="disabled nav-link" routerLink="/spacing">Spacing</a>
+          
+          <a class="disabled nav-link" routerLink="/layout">Layout</a>
+          <div class="nav-header pt-4">Components</div>
+          <a class="nav-link" routerLink="/threaded-messages">Threaded Messages</a>
+          <a class="nav-link" routerLink="/tables">Tables</a>
+          <a class="disabled nav-link" routerLink="/button">Button</a>
+          <a class="disabled nav-link" routerLink="/forms">Forms</a>
+          <a class="disabled nav-link" routerLink="/upload-form">DocumentU Upload</a>
+          <a class="disabled nav-link" disabled routerLink="/navigation-menu">Navigation Menu</a>
+          
+        </nav>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="p-4 view-container">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div> 

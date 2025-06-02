@@ -1,0 +1,91 @@
+<span class="heading1 pt-4 pb-4" style="color: #4A7390; font-size: 48px;">Getting Started</span>
+
+<div class="container-fluid mt-5">
+  <h3 class="mb-3 heading3" style="color: #4A7390;">Welcome to Willow</h3>
+  <willow-typography [variant]="type.Body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  </willow-typography>
+</div>
+
+<div class="container-fluid mt-5">
+  <h3 class="mb-3 heading3" style="color: #4A7390;">Quick Start Guide</h3>
+  <h4 class="mb-3 heading4">Installation</h4>
+
+  <!-- TODO: install instructions here -->
+  <willow-typography [variant]="type.Body">
+    <p>To install the Angular-Willow library in your project, run the following command:</p>
+  </willow-typography>
+
+  <pre class="code-block p-3 my-3 bg-light position-relative"><code class="language-bash">npm install angular-willow --save</code><button class="copy-btn" onclick="copyToClipboard('npm install angular-willow --save')">Copy</button></pre>
+
+  <willow-typography [variant]="type.Body">
+    <p>After installation, import the <code>AngularWillowModule</code> in your app module:</p>
+  </willow-typography>
+
+  <pre class="code-block p-3 my-3 bg-light position-relative"><code class="language-typescript">import &#123; NgModule &#125; from '&#64;angular/core';
+import &#123; BrowserModule &#125; from '&#64;angular/platform-browser';
+import &#123; AngularWillowModule &#125; from 'angular-willow';
+
+import &#123; AppComponent &#125; from './app.component';
+
+&#64;NgModule(&#123;
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AngularWillowModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+&#125;)
+export class AppModule &#123; &#125;</code><button class="copy-btn" onclick="copyToClipboard('import module code')">Copy</button></pre>
+    
+  <willow-typography [variant]="type.Body">
+    <p>Now you can use the Typography component in your templates:</p>
+  </willow-typography>
+    
+  <pre class="code-block p-3 my-3 bg-light position-relative"><code class="language-html">&lt;!-- In your component template --&gt;
+&lt;willow-typography [variant]="type.Body"&gt;
+  This is a body text example
+&lt;/willow-typography&gt;
+
+&lt;willow-typography [variant]="type.Heading1"&gt;
+  This is a heading example
+&lt;/willow-typography&gt;</code><button class="copy-btn" onclick="copyToClipboard('component template code')">Copy</button></pre>
+    
+  <willow-typography [variant]="type.Body">
+    <p>Make sure to import the TypographyVariant enum in your component:</p>
+  </willow-typography>
+    
+  <pre class="code-block p-3 my-3 bg-light position-relative"><code class="language-typescript">import &#123; Component &#125; from '&#64;angular/core';
+import &#123; TypographyVariant &#125; from 'angular-willow';
+
+&#64;Component(&#123;
+  selector: 'app-my-component',
+  templateUrl: './my-component.component.html',
+  styleUrls: ['./my-component.component.scss']
+&#125;)
+export class MyComponent &#123;
+  // Make the enum accessible in the template
+  type = TypographyVariant;
+&#125;</code><button class="copy-btn" onclick="copyToClipboard('component class code')">Copy</button></pre>
+
+    
+  <h4 class="mt-3 heading4">Components</h4>
+  <willow-typography [variant]="type.Body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </willow-typography>
+  
+  <h4 class="mt-3 heading4">Guidelines</h4>
+  <willow-typography [variant]="type.Body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </willow-typography>
+</div>
+
+<div class="container-fluid mt-5">
+  <h3 class="mb-3 heading3" style="color: #4A7390;">Resources</h3>
+  <willow-typography [variant]="type.Body">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  </willow-typography>
+</div> 

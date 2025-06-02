@@ -1,0 +1,53 @@
+.color-box {
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.primary-1 {
+  background-color: #4A7390;
+}
+
+.primary-2 {
+  background-color: #6495B8;
+}
+
+.primary-3 {
+  background-color: #A6C2D8;
+}
+
+.primary-4 {
+  background-color: #335066;
+}
+
+.neutral-1 {
+  background-color: #333333;
+}
+
+.neutral-2 {
+  background-color: #666666;
+}
+
+.neutral-3 {
+  background-color: #CCCCCC;
+}
+
+.neutral-4 {
+  background-color: #F8F8F8;
+  border: 1px solid #eee;
+} 
+
+
+  /* Heading 1 */
+  .heading1 {
+    font-family: var(--text-family-title, "museo-slab");
+    font-size: var(--text-size-hidden-xl, 32px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--text-line-height-hidden-xl, 38px); /* 118.75% */
+  }
+
+.d-flex .gap-2 {
+  gap: 0.5rem;
+}

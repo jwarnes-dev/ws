@@ -1,0 +1,158 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --color-willow-gray-400: #C2C2C3;
+  --color-willow-blue---super-light: #F3F9FF;
+  --color-willow-blue: #4A7390;
+  --text-Willow-color-gray: #4B4C4D;
+  --text-Willow-color-blue: #4A7390;
+  --text-Willow-color-link: #005589;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text-Willow-color-gray, #4B4C4D);
+}
+
+/* Text/willow/Body - Regular */
+.body {
+  font-family: var(--text-willow-family-body, "Roboto");
+  font-size: var(--text-willow-size-hidden-xs, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--text-willow-line-height-hidden-xs, 24px); /* 150% */
+  letter-spacing: -0.18px;
+}
+
+/* Text/willow/Small - Regular */
+.small {
+  font-family: var(--text-willow-family-body, "Roboto");
+  font-size: var(--text-willow-size-hidden-xxs, 12px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--text-willow-line-height-hidden-xxs, 20px); /* 166.667% */
+}
+/* Text/willow/Link */
+.link {
+  color: var(--text-Willow-color-link, #005589);
+  font-family: var(--text-willow-family-body, "Roboto");
+  font-size: var(--text-willow-size-hidden-xs, 16px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--text-willow-line-height-hidden-xxs, 20px); /* 125% */
+  text-decoration-line: underline;
+}
+
+/* Text/willow/Display - Heavy */
+.display {
+  font-family: var(--text-willow-family-title, "museo-slab");
+  font-size: var(--text-my-wellmark-size-hidden-xxl, 60px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--text-willow-line-height-hidden-xxl, 72px); /* 120% */
+  letter-spacing: -0.18px;
+}
+
+
+
+/* Heading 1 */
+.heading1 {
+  font-family: var(--text-family-title, "museo-slab");
+  font-size: var(--text-size-hidden-xl, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--text-line-height-hidden-xl, 38px); /* 118.75% */
+}
+
+/* Text/willow/Heading 2 */
+.heading2 {
+  font-family: var(--text-willow-family-title, "museo-slab");
+  font-size: var(--text-willow-size-hidden-lg, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--text-willow-line-height-hidden-lg, 38px); /* 118.75% */
+}
+/* Text/willow/Heading 3 */
+.heading3 {
+  font-family: var(--text-willow-family-body, "Roboto");
+  font-size: var(--text-willow-size-hidden-md, 24px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-willow-line-height-hidden-md, 28px); /* 116.667% */
+}
+
+/* Text/willow/Heading 4 */
+.heading4 {
+  font-family: var(--text-willow-family-body, "Roboto");
+  font-size: var(--text-willow-size-hidden-s, 20px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--text-willow-line-height-hidden-xs, 24px); /* 120% */
+  margin-bottom: 4px !important;
+}
+
+.heading5 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.heading6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Add these styles at the end of the file */
+.code-block {
+  border-radius: 4px;
+  position: relative;
+  overflow: auto;
+  margin: 1rem 0;
+}
+
+.code-block code {
+  font-family: 'Courier New', Courier, monospace;
+  display: block;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #4a7390;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
+/* Syntax highlighting */
+.language-typescript .keyword,
+.language-html .tag {
+  color: #0033b3;
+}
+
+.language-typescript .string,
+.language-html .attribute {
+  color: #008000;
+}
+
+.language-typescript .comment {
+  color: #808080;
+  font-style: italic;
+}
+
+.language-bash {
+  color: #333;
+}
