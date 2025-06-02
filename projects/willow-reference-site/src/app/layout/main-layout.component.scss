@@ -17,7 +17,7 @@
   }
   
 
-.nav-title-header, .nav-header {
+.nav-title-header, .nav-header, a {
   color: rgba(75, 76, 77, 1);
   font-family: "Roboto";
   font-size: 12px;
@@ -26,6 +26,7 @@
   letter-spacing: 0px;
   text-align: left;
   line-height: 20px;
+  text-decoration:none;
 }
 
 .nav-title {
@@ -70,4 +71,11 @@ line-height: 36px;
 a.disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.title-banner-condensed, h1 {
+  background: linear-gradient(90deg, rgba(73,115,144,1) 55%, rgba (73,115,144,1) 77%, rgba(166, 198,221,1) 100%);
+  padding: 72px 52px;
+  color:white;
+
 }
