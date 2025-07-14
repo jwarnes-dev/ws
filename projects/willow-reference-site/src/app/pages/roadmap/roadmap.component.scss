@@ -1,0 +1,28 @@
+.roadmap-page {
+  max-width: 1000px;
+}
+
+:host ::ng-deep markdown {
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    color: #34495e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  ul {
+    margin-bottom: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.table-section {
+  margin-top: 2rem;
+} 

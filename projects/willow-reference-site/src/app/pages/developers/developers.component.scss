@@ -1,0 +1,44 @@
+.developers-page {
+  max-width: 800px;
+}
+
+:host ::ng-deep markdown {
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    color: #34495e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    color: #7f8c8d;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  pre {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  
+  code {
+    background-color: #f8f9fa;
+    color: #e83e8c;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+  
+  pre code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+  }
+} 

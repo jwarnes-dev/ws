@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularWillowModule } from 'angular-willow';
 import { FormsModule } from '@angular/forms';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,9 @@ import { AboutpageComponent } from './pages/aboutpage/aboutpage.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { StartpageComponent } from './pages/startpage/startpage.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DevelopersComponent } from './pages/developers/developers.component';
+import { DesignComponent } from './pages/design/design.component';
+import { RoadmapComponent } from './pages/roadmap/roadmap.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +28,17 @@ import { HomeComponent } from './pages/home/home.component';
     AboutpageComponent,
     TablesComponent,
     StartpageComponent,
-    HomeComponent
+    HomeComponent,
+    DevelopersComponent,
+    DesignComponent,
+    RoadmapComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularWillowModule,
-    FormsModule
+    FormsModule,
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

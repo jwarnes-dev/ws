@@ -8,6 +8,9 @@ import { AboutpageComponent } from './pages/aboutpage/aboutpage.component';
 import { TablesComponent } from './pages/tables/tables.component';
 import { StartpageComponent } from './pages/startpage/startpage.component';
 import { HomeComponent } from './pages/home/home.component';
+import { DevelopersComponent } from './pages/developers/developers.component';
+import { DesignComponent } from './pages/design/design.component';
+import { RoadmapComponent } from './pages/roadmap/roadmap.component';
 
 const routes: Routes = [
   {
@@ -21,7 +24,10 @@ const routes: Routes = [
       { path: 'about', component: AboutpageComponent },
       { path: 'tables', component: TablesComponent },
       { path: 'start', component: StartpageComponent },
-      { path: 'home', component: HomeComponent }
+      { path: 'home', component: HomeComponent },
+      { path: 'developers', component: DevelopersComponent },
+      { path: 'design', component: DesignComponent },
+      { path: 'roadmap', component: RoadmapComponent }
     ]
   }
 ];
