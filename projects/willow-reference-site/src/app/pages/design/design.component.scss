@@ -1,0 +1,30 @@
+.design-page {
+  max-width: 800px;
+}
+
+:host ::ng-deep markdown {
+  h1 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+  }
+  
+  h2 {
+    color: #34495e;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    color: #7f8c8d;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  ul {
+    margin-bottom: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.5rem;
+  }
+} 
