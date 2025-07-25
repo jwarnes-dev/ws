@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TypographyVariant } from 'angular-willow';
+import { TypographyVariant } from '@wellmark/angular-willow';
 
 @Component({
   selector: 'app-startpage',
@@ -17,7 +17,7 @@ export class StartpageComponent {
     if (code === 'import module code') {
       textToCopy = `import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularWillowModule } from 'angular-willow';
+import { AngularWillowModule } from '@wellmark/angular-willow';
 
 import { AppComponent } from './app.component';
 
@@ -44,7 +44,7 @@ export class AppModule { }`;
 </willow-typography>`;
     } else if (code === 'component class code') {
       textToCopy = `import { Component } from '@angular/core';
-import { TypographyVariant } from 'angular-willow';
+import { TypographyVariant } from '@wellmark/angular-willow';
 
 @Component({
   selector: 'app-my-component',

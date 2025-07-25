@@ -3,39 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-willow": {
-      "projectType": "library",
-      "root": "projects/angular-willow",
-      "sourceRoot": "projects/angular-willow/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/angular-willow/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/angular-willow/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/angular-willow/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "projects/angular-willow/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
-          }
-        }
-      }
-    },
+
     "demo-willow-angular": {
       "projectType": "application",
       "schematics": {

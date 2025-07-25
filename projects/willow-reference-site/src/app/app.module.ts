@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AngularWillowModule } from 'angular-willow';
+import { AngularWillowModule } from '@wellmark/angular-willow';
 import { FormsModule } from '@angular/forms';
 import { MarkdownModule } from 'ngx-markdown';
 

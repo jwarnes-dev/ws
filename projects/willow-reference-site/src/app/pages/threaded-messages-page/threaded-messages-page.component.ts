@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TypographyVariant, ThreadedMessage } from 'angular-willow';
+import { TypographyVariant, ThreadedMessage } from '@wellmark/angular-willow';
 
 @Component({
   selector: 'app-threaded-messages-page',

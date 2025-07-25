@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TypographyVariant, Column, Row } from 'angular-willow';
+import { TypographyVariant, Column, Row } from '@wellmark/angular-willow';
 
 @Component({
   selector: 'app-tables',

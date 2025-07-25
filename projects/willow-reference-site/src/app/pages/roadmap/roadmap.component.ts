@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Column, Row } from 'angular-willow';
+import { Column, Row } from '@wellmark/angular-willow';
 
 @Component({
   selector: 'app-roadmap',
