@@ -22,6 +22,7 @@
     "@fortawesome/angular-fontawesome": "^0.12.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@wellmark/angular-willow": "^0.1.6",
     "bootstrap": "^5.3.5",
     "marked": "^4.3.0",
     "ngx-markdown": "^15.1.1",
