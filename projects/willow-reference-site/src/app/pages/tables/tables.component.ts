@@ -4,7 +4,8 @@ import { TypographyVariant, Column, Row } from '@wellmark/angular-willow';
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.scss']
+  styleUrls: ['./tables.component.scss'],
+  standalone: false
 })
 export class TablesComponent {
   constructor() { }

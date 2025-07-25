@@ -1,0 +1,90 @@
+.code-block {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.code-block code {
+  color: #6f42c1;
+  background: transparent;
+}
+
+.table-responsive {
+  margin-top: 1rem;
+}
+
+.table th {
+  border-top: none;
+  font-weight: 600;
+  color: #4A7390;
+}
+
+.form-container {
+  background: #ffffff;
+  border: 1px solid #e0e6ed;
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-group {
+  margin: 1.5rem 0;
+}
+
+.checkbox-group .form-check {
+  margin-bottom: 0.75rem;
+}
+
+.form-actions {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e0e6ed;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #4A7390;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+h5 {
+  color: #4A7390;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e6ed;
+  padding-bottom: 0.5rem;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .form-container {
+    padding: 1.5rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+// Custom spacing for form rows
+.row {
+  margin-bottom: 1rem;
+}
+
+.row:last-child {
+  margin-bottom: 0;
+}
+
+// Alert styling within forms
+:host ::ng-deep willow-alert {
+  margin-top: 1rem;
+} 

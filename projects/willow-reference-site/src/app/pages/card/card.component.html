@@ -1,0 +1,185 @@
+<div class="container-fluid">
+  <h1 class="heading1 pt-4 pb-4" style="color: #4A7390;">Card Component</h1>
+  
+  <div class="row">
+    <div class="col-12">
+      <willow-typography [variant]="type.Body">
+        The Card component provides a simple content container with customizable background colors. Perfect for organizing content in a clean, structured layout.
+      </willow-typography>
+    </div>
+  </div>
+
+  <!-- Basic Card Examples -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Basic Card Examples</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Default Card -->
+    <div class="col-md-6 mb-4">
+      <willow-card>
+        <div style="padding: 1.5rem;">
+          <h5 style="margin-bottom: 1rem; color: #4A7390;">Default Card</h5>
+          <willow-typography [variant]="type.Body">
+            This is a basic card with default styling. The card component provides a simple container for your content.
+          </willow-typography>
+        </div>
+      </willow-card>
+    </div>
+
+    <!-- Card with Primary Background -->
+    <div class="col-md-6 mb-4">
+      <willow-card [backgroundColor]="primaryColor">
+        <div style="padding: 1.5rem;">
+          <h5 style="margin-bottom: 1rem; color: white;">Primary Background Card</h5>
+          <willow-typography [variant]="type.Body">
+            <span style="color: white;">
+              This card uses the primary brand color as its background color.
+            </span>
+          </willow-typography>
+        </div>
+      </willow-card>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Light Background Card -->
+    <div class="col-md-6 mb-4">
+      <willow-card [backgroundColor]="lightColor">
+        <div style="padding: 1.5rem;">
+          <h5 style="margin-bottom: 1rem; color: #4A7390;">Light Background Card</h5>
+          <willow-typography [variant]="type.Body">
+            This card uses a light blue background color for subtle emphasis.
+          </willow-typography>
+        </div>
+      </willow-card>
+    </div>
+
+    <!-- Gray Background Card -->
+    <div class="col-md-6 mb-4">
+      <willow-card [backgroundColor]="grayColor">
+        <div style="padding: 1.5rem;">
+          <h5 style="margin-bottom: 1rem; color: #4A7390;">Gray Background Card</h5>
+          <willow-typography [variant]="type.Body">
+            This card uses a gray background for a more neutral appearance.
+          </willow-typography>
+        </div>
+      </willow-card>
+    </div>
+  </div>
+
+  <!-- Card with Content -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4 class="heading4 mb-3">Card with Rich Content</h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8 mb-4">
+      <willow-card [backgroundColor]="lightColor">
+        <div style="padding: 2rem;">
+          <h4 style="margin-bottom: 1rem; color: #4A7390;">Product Information</h4>
+          <willow-typography [variant]="type.Body">
+            <p>Cards can contain any type of content including text, images, and interactive elements.</p>
+            <p>You can structure your content however you need within the card container.</p>
+          </willow-typography>
+          <div style="margin-top: 1.5rem;">
+            <willow-button variant="primary" style="margin-right: 0.5rem;">
+              Learn More
+            </willow-button>
+            <willow-button variant="secondary">
+              View Details
+            </willow-button>
+          </div>
+        </div>
+      </willow-card>
+    </div>
+  </div>
+
+  <!-- Usage Documentation -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Usage</h3>
+      
+      <willow-typography [variant]="type.Body">
+        <p>Import the component in your module and use it in your templates:</p>
+      </willow-typography>
+
+      <pre class="code-block p-3 my-3 bg-light"><code class="language-typescript">import &#123; AngularWillowModule &#125; from '&#64;wellmark/angular-willow';</code></pre>
+
+      <willow-typography [variant]="type.Body">
+        <p>Basic usage:</p>
+      </willow-typography>
+
+      <pre class="code-block p-3 my-3 bg-light"><code class="language-html">&lt;!-- Basic card --&gt;
+&lt;willow-card&gt;
+  &lt;div style="padding: 1.5rem;"&gt;
+    &lt;h3&gt;Card Title&lt;/h3&gt;
+    &lt;p&gt;Your card content goes here.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/willow-card&gt;
+
+&lt;!-- Card with background color --&gt;
+&lt;willow-card [backgroundColor]="'#4A7390'"&gt;
+  &lt;div style="padding: 1.5rem;"&gt;
+    &lt;h3 style="color: white;"&gt;Colored Card&lt;/h3&gt;
+    &lt;p style="color: white;"&gt;Card with custom background color.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/willow-card&gt;</code></pre>
+    </div>
+  </div>
+
+  <!-- Props Documentation -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4 class="heading4 mb-3">Properties</h4>
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>backgroundColor</code></td>
+              <td><code>string</code></td>
+              <td><code>undefined</code></td>
+              <td>The background color of the card (CSS color value)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="heading4 mb-3 mt-4">Content Projection</h4>
+      
+      <willow-typography [variant]="type.Body">
+        <p>The card component uses content projection to display any content you place inside it. You are responsible for styling and padding your content appropriately.</p>
+      </willow-typography>
+
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Slot</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Default</td>
+              <td>All content placed inside the card will be projected into the card container</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div> 

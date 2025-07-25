@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "demo-willow-angular:build:production"
+              "buildTarget": "demo-willow-angular:build:production"
             },
             "development": {
-              "browserTarget": "demo-willow-angular:build:development"
+              "buildTarget": "demo-willow-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -77,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo-willow-angular:build"
+            "buildTarget": "demo-willow-angular:build"
           }
         },
         "test": {
@@ -163,10 +163,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "willow-reference-site:build:production"
+              "buildTarget": "willow-reference-site:build:production"
             },
             "development": {
-              "browserTarget": "willow-reference-site:build:development"
+              "buildTarget": "willow-reference-site:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -174,7 +174,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "willow-reference-site:build"
+            "buildTarget": "willow-reference-site:build"
           }
         },
         "test": {

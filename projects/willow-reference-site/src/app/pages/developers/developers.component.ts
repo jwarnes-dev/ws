@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-developers',
   templateUrl: './developers.component.html',
-  styleUrls: ['./developers.component.scss']
+  styleUrls: ['./developers.component.scss'],
+  standalone: false
 })
 export class DevelopersComponent {
   

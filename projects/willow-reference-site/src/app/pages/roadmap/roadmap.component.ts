@@ -4,7 +4,8 @@ import { Column, Row } from '@wellmark/angular-willow';
 @Component({
   selector: 'app-roadmap',
   templateUrl: './roadmap.component.html',
-  styleUrls: ['./roadmap.component.scss']
+  styleUrls: ['./roadmap.component.scss'],
+  standalone: false
 })
 export class RoadmapComponent {
 

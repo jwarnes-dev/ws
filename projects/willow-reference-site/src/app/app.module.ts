@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AngularWillowModule } from '@wellmark/angular-willow';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MarkdownModule } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +17,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { DevelopersComponent } from './pages/developers/developers.component';
 import { DesignComponent } from './pages/design/design.component';
 import { RoadmapComponent } from './pages/roadmap/roadmap.component';
+import { AlertComponent } from './pages/alert/alert.component';
+import { ButtonComponent } from './pages/button/button.component';
+import { CardComponent } from './pages/card/card.component';
+import { FormsComponent } from './pages/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -31,16 +35,22 @@ import { RoadmapComponent } from './pages/roadmap/roadmap.component';
     HomeComponent,
     DevelopersComponent,
     DesignComponent,
-    RoadmapComponent
+    RoadmapComponent,
+    AlertComponent,
+    ButtonComponent,
+    CardComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularWillowModule,
     FormsModule,
+    ReactiveFormsModule,
     MarkdownModule.forRoot()
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
