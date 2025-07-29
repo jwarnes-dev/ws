@@ -1,46 +1,399 @@
-<h1 class="heading1 pt-4 pb-4" style="color: #4A7390; font-size: 48px;">Tables</h1>
-<willow-typography [variant]="type.Body">
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-</willow-typography>
-
-<div class="container-fluid mt-4">
-  <!-- Basic Table with Lines -->
-  <div class="mb-5">
-    <willow-typography [variant]="type.Heading2">Basic Table with Divider Lines</willow-typography>
-    <willow-table class="mt-4"
-      [columns]="columns"
-      [rows]="rows"
-      rowStyle="lines"
-      headerStyle="basic"
-      density="normal">
-    </willow-table>
+<div class="container-fluid">
+  <h1 class="heading1 pt-4 pb-4" style="color: #4A7390;">Table Component</h1>
+  
+  <div class="row">
+    <div class="col-12">
+      <willow-typography [variant]="type.Body">
+        The Table component provides a flexible, sortable data table with support for custom cell templates, multiple styling options, and responsive design. Perfect for displaying complex data with interactive elements.
+      </willow-typography>
+    </div>
   </div>
 
-  <!-- Striped Table with Heavy Header -->
-  <div class="mb-5">
-    <willow-typography class="mb-2" [variant]="type.Heading2">Striped Table with Emphasized Header</willow-typography>
-    <willow-typography class="mb-3" [variant]="type.Body">
+  <!-- Basic Table Examples -->
+  <div class="documentation-section">
+    <h3 class="heading3 mb-4">Basic Table Examples</h3>
+    
+    <!-- Basic Table with Lines -->
+    <div class="mb-5">
+      <h4 class="heading4 mb-3">Basic Table with Divider Lines</h4>
+      <willow-typography [variant]="type.Body" class="mb-3">
+        A clean table with horizontal divider lines between rows and a basic header style.
+      </willow-typography>
+      <willow-table
+        [columns]="columns"
+        [rows]="rows"
+        rowStyle="lines"
+        headerStyle="basic"
+        density="normal">
+      </willow-table>
+    </div>
+
+    <!-- Striped Table with Heavy Header -->
+    <div class="mb-5">
+      <h4 class="heading4 mb-3">Striped Table with Emphasized Header</h4>
+      <willow-typography [variant]="type.Body" class="mb-3">
+        Alternating row colors with a prominent dark blue header for improved readability.
+      </willow-typography>
+      <willow-table
+        [columns]="columns"
+        [rows]="rows"
+        rowStyle="stripes"
+        headerStyle="heavy"
+        density="normal">
+      </willow-table>
+    </div>
+
+    <!-- Condensed Table -->
+    <div class="mb-5">
+      <h4 class="heading4 mb-3">Condensed Table</h4>
+      <willow-typography [variant]="type.Body" class="mb-3">
+        Compact spacing for displaying more data in less vertical space.
+      </willow-typography>
+      <willow-table
+        [columns]="columns"
+        [rows]="rows"
+        rowStyle="stripes"
+        headerStyle="basic"
+        density="condensed">
+      </willow-table>
+    </div>
+  </div>
+
+  <!-- Advanced Table with Custom Templates -->
+  <div class="documentation-section">
+    <h3 class="heading3 mb-4">Advanced Table with Custom Cell Templates</h3>
+    
+    <willow-typography [variant]="type.Body" class="mb-3">
+      This example demonstrates the power of custom cell templates with Willow buttons, badges, progress bars, and interactive elements.
     </willow-typography>
+
+    <!-- Custom Templates -->
+    <ng-template #statusTemplate let-value let-row="row">
+      <span class="badge" [ngClass]="getStatusClass(value)">
+        {{ value | titlecase }}
+      </span>
+    </ng-template>
+
+    <ng-template #priorityTemplate let-value let-row="row">
+      <span class="badge" [ngClass]="getPriorityClass(value)">
+        {{ value | titlecase }} Priority
+      </span>
+    </ng-template>
+
+    <ng-template #progressTemplate let-value let-row="row">
+      <div class="progress-container">
+        <div class="progress-bar" [style.width.%]="value">
+        </div>
+        <div class="progress-text">{{ value }}%</div>
+      </div>
+    </ng-template>
+
+    <ng-template #actionTemplate let-value let-row="row">
+      <div class="action-buttons">
+        <willow-button 
+          variant="tertiary" 
+          (click)="onView(row)">
+          View
+        </willow-button>
+        <willow-button 
+          variant="secondary" 
+          (click)="onEdit(row)">
+          Edit
+        </willow-button>
+        <willow-button 
+          variant="primary" 
+          [destructive]="true" 
+          (click)="onDelete(row)">
+          Delete
+        </willow-button>
+      </div>
+    </ng-template>
+
     <willow-table
-      [columns]="columns"
-      [rows]="rows"
+      [columns]="advancedColumns"
+      [rows]="advancedRows"
+      [cellTemplates]="cellTemplates"
       rowStyle="stripes"
       headerStyle="heavy"
       density="normal">
     </willow-table>
   </div>
 
-  <!-- Condensed Table -->
-  <div class="mb-5">
-    <willow-typography class="mb-2" [variant]="type.Heading2">Condensed Table</willow-typography>
-    <willow-typography class="mb-3" [variant]="type.Body">
+  <!-- Custom Table using Willow CSS Classes -->
+  <div class="documentation-section">
+    <h3 class="heading3 mb-4">Custom Table using Willow CSS Classes</h3>
+    
+    <willow-typography [variant]="type.Body" class="mb-3">
+      Build your own table using the Willow design system CSS classes for maximum customization and control.
     </willow-typography>
-    <willow-table
-      [columns]="columns"
-      [rows]="rows"
-      rowStyle="stripes"
-      headerStyle="basic"
-      density="condensed">
-    </willow-table>
+
+    <div class="custom-willow-table-example">
+      <div class="willow-table-container">
+        <table class="willow-table willow-table-header-heavy willow-table-row-stripes willow-table-density-normal">
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Category</th>
+              <th>Price</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of customTableData; let i = index" [class.willow-table-row-odd]="i % 2 === 1">
+              <td>{{ item.name }}</td>
+              <td>{{ item.category }}</td>
+              <td><strong>{{ item.price }}</strong></td>
+              <td>
+                <span class="badge" 
+                      [ngClass]="item.availability === 'In Stock' ? 'badge-success' : 
+                                 item.availability === 'Limited' ? 'badge-warning' : 
+                                 item.availability === 'Available' ? 'badge-info' : 'badge-secondary'">
+                  {{ item.availability }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Usage Documentation -->
+  <div class="documentation-section">
+    <h3 class="heading3 mb-4">Usage</h3>
+    
+    <willow-typography [variant]="type.Body">
+      <p>Import the component in your module and use it in your templates:</p>
+    </willow-typography>
+
+    <pre class="code-block p-3 my-3"><code class="language-typescript">import &#123; AngularWillowModule &#125; from '&#64;wellmark/angular-willow';</code></pre>
+
+    <h4 class="heading4 mb-3">Basic Usage</h4>
+
+    <pre class="code-block p-3 my-3"><code class="language-html">&lt;!-- Basic table --&gt;
+&lt;willow-table
+  [columns]="tableColumns"
+  [rows]="tableData"
+  rowStyle="stripes"
+  headerStyle="heavy"&gt;
+&lt;/willow-table&gt;</code></pre>
+
+    <h4 class="heading4 mb-3">With Custom Cell Templates</h4>
+
+    <pre class="code-block p-3 my-3"><code class="language-html">&lt;!-- Define templates --&gt;
+&lt;ng-template #statusTemplate let-value let-row="row"&gt;
+  &lt;span class="badge bg-success"&gt;{{'{{'}} value {{'}}'}}&lt;/span&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #actionTemplate let-value let-row="row"&gt;
+  &lt;willow-button variant="primary" (click)="onEdit(row)"&gt;
+    Edit
+  &lt;/willow-button&gt;
+  &lt;willow-button variant="primary" [destructive]="true" (click)="onDelete(row)"&gt;
+    Delete
+  &lt;/willow-button&gt;
+&lt;/ng-template&gt;
+
+&lt;!-- Use in table --&gt;
+&lt;willow-table
+  [columns]="columns"
+  [rows]="data"
+  [cellTemplates]="{{'{{'}} 'status': statusTemplate, 'actions': actionTemplate {{'}}'}}"&gt;
+&lt;/willow-table&gt;</code></pre>
+
+    <h4 class="heading4 mb-3">Component Setup</h4>
+
+    <pre class="code-block p-3 my-3"><code class="language-typescript">import &#123; Component, TemplateRef, ViewChild &#125; from '&#64;angular/core';
+import &#123; Column, Row &#125; from '&#64;wellmark/angular-willow';
+
+&#64;Component(&#123;
+  selector: 'app-example',
+  templateUrl: './example.component.html'
+&#125;)
+export class ExampleComponent &#123;
+  &#64;ViewChild('statusTemplate', &#123; static: true &#125;) statusTemplate!: TemplateRef&lt;any&gt;;
+  &#64;ViewChild('actionTemplate', &#123; static: true &#125;) actionTemplate!: TemplateRef&lt;any&gt;;
+
+  columns: Column[] = [
+    &#123; field: 'id', headerName: 'ID', width: 70 &#125;,
+    &#123; field: 'name', headerName: 'Name', width: 150 &#125;,
+    &#123; field: 'status', headerName: 'Status', width: 120, templateKey: 'status' &#125;,
+    &#123; field: 'actions', headerName: 'Actions', width: 200, templateKey: 'actions', sortable: false &#125;
+  ];
+
+  get cellTemplates() &#123;
+    return &#123;
+      'status': this.statusTemplate,
+      'actions': this.actionTemplate
+    &#125;;
+  &#125;
+&#125;</code></pre>
+
+    <h4 class="heading4 mb-3">Using Willow CSS Classes Directly</h4>
+
+    <pre class="code-block p-3 my-3"><code class="language-html">&lt;table class="willow-table willow-table-header-heavy willow-table-row-stripes willow-table-density-normal"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Column 1&lt;/th&gt;
+      &lt;th&gt;Column 2&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr class="willow-table-row-odd"&gt;
+      &lt;td&gt;Data 1&lt;/td&gt;
+      &lt;td&gt;Data 2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+  </div>
+
+  <!-- Properties Documentation -->
+  <div class="documentation-section">
+    <h4 class="heading4 mb-3">Properties</h4>
+    
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>columns</code></td>
+            <td><code>Column[]</code></td>
+            <td><code>[]</code></td>
+            <td>Array of column definitions defining table structure</td>
+          </tr>
+          <tr>
+            <td><code>rows</code></td>
+            <td><code>Row[]</code></td>
+            <td><code>[]</code></td>
+            <td>Array of row data objects to display</td>
+          </tr>
+          <tr>
+            <td><code>rowStyle</code></td>
+            <td><code>'stripes' | 'lines'</code></td>
+            <td><code>'stripes'</code></td>
+            <td>Visual style for table rows</td>
+          </tr>
+          <tr>
+            <td><code>headerStyle</code></td>
+            <td><code>'basic' | 'heavy'</code></td>
+            <td><code>'basic'</code></td>
+            <td>Visual style for table headers</td>
+          </tr>
+          <tr>
+            <td><code>density</code></td>
+            <td><code>'normal' | 'condensed'</code></td>
+            <td><code>'normal'</code></td>
+            <td>Cell padding density</td>
+          </tr>
+          <tr>
+            <td><code>cellTemplates</code></td>
+            <td><code>&#123;[key: string]: TemplateRef&lt;any&gt;&#125;</code></td>
+            <td><code>&#123;&#125;</code></td>
+            <td>Map of template references for custom cell rendering</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="heading4 mb-3 mt-4">Column Interface</h4>
+    
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Required</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>field</code></td>
+            <td><code>string</code></td>
+            <td>Yes</td>
+            <td>The field name in the row data object</td>
+          </tr>
+          <tr>
+            <td><code>headerName</code></td>
+            <td><code>string</code></td>
+            <td>Yes</td>
+            <td>Display name for the column header</td>
+          </tr>
+          <tr>
+            <td><code>width</code></td>
+            <td><code>number</code></td>
+            <td>No</td>
+            <td>Optional fixed width in pixels</td>
+          </tr>
+          <tr>
+            <td><code>sortable</code></td>
+            <td><code>boolean</code></td>
+            <td>No</td>
+            <td>Whether the column is sortable (default: true)</td>
+          </tr>
+          <tr>
+            <td><code>templateKey</code></td>
+            <td><code>string</code></td>
+            <td>No</td>
+            <td>Key to match with custom cell templates</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="heading4 mb-3 mt-4">Available Willow CSS Classes</h4>
+    
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Class</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>willow-table</code></td>
+            <td>Base table class with Willow styling</td>
+          </tr>
+          <tr>
+            <td><code>willow-table-header-basic</code></td>
+            <td>Basic header style with light background</td>
+          </tr>
+          <tr>
+            <td><code>willow-table-header-heavy</code></td>
+            <td>Heavy header style with dark blue background</td>
+          </tr>
+          <tr>
+            <td><code>willow-table-row-lines</code></td>
+            <td>Row style with border lines between rows</td>
+          </tr>
+          <tr>
+            <td><code>willow-table-row-stripes</code></td>
+            <td>Row style with alternating background colors</td>
+          </tr>
+          <tr>
+            <td><code>willow-table-density-normal</code></td>
+            <td>Normal cell padding</td>
+          </tr>
+          <tr>
+            <td><code>willow-table-density-condensed</code></td>
+            <td>Reduced cell padding for compact display</td>
+          </tr>
+          <tr>
+            <td><code>willow-table-row-odd</code></td>
+            <td>Apply to odd rows when using stripe styling manually</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div> 

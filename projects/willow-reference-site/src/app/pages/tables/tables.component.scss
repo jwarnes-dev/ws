@@ -1,4 +1,137 @@
 :host {
   display: block;
   padding: 20px;
+}
+
+// Custom badge styles for table examples
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-align: center;
+  white-space: nowrap;
+  font-family: var(--text-family-body, Roboto);
+}
+
+.badge-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.badge-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.badge-warning {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.badge-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.badge-high-priority {
+  background-color: #dc3545;
+  color: white;
+}
+
+.badge-medium-priority {
+  background-color: #fd7e14;
+  color: white;
+}
+
+.badge-low-priority {
+  background-color: #28a745;
+  color: white;
+}
+
+// Progress bar styles
+.progress-container {
+  width: 100%;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--component-button-willow-primary-dark-default-fill, #4A7390);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+  position: relative;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 500;
+  color: #4B4C4D;
+  z-index: 1;
+}
+
+// Action button container
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+// Code block styling
+.code-block {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.4;
+  overflow-x: auto;
+}
+
+// Documentation sections
+.documentation-section {
+  margin-bottom: 2rem;
+  
+  h3 {
+    color: #4A7390;
+    margin-bottom: 1rem;
+  }
+  
+  h4 {
+    color: #4A7390;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+  }
+}
+
+// Custom table example using Willow CSS classes
+.custom-willow-table-example {
+  margin-top: 2rem;
+  
+  .table-container {
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .progress-container {
+    min-width: 100px;
+  }
 } 
