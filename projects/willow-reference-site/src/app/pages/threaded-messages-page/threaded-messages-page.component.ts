@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { TypographyVariant, ThreadedMessage } from 'angular-willow';
+import { TypographyVariant, ThreadedMessage } from '@wellmark/angular-willow';
 
 @Component({
   selector: 'app-threaded-messages-page',
   templateUrl: './threaded-messages-page.component.html',
-  styleUrls: ['./threaded-messages-page.component.scss']
+  styleUrls: ['./threaded-messages-page.component.scss'],
+  standalone: false
 })
 export class ThreadedMessagesPageComponent {
   constructor() { }

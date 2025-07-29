@@ -1,0 +1,50 @@
+.code-block {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.code-block code {
+  color: #6f42c1;
+  background: transparent;
+}
+
+.table-responsive {
+  margin-top: 1rem;
+}
+
+.table th {
+  border-top: none;
+  font-weight: 600;
+  color: #4A7390;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+// Ensure proper spacing for card examples
+.mb-4 {
+  margin-bottom: 2rem !important;
+}
+
+// Custom card layout adjustments
+:host ::ng-deep willow-card {
+  height: 100%;
+  display: block;
+}
+
+// Responsive adjustments
+@media (max-width: 768px) {
+  .col-md-4, .col-md-6 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-img-top {
+    height: 150px;
+  }
+} 

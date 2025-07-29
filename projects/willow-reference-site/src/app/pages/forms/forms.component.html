@@ -1,0 +1,394 @@
+<div class="container-fluid">
+  <h1 class="heading1 pt-4 pb-4" style="color: #4A7390;">Form Components</h1>
+  
+  <div class="row">
+    <div class="col-12">
+      <willow-typography [variant]="type.Body">
+        The Willow design system provides comprehensive form components for building accessible and user-friendly forms.
+      </willow-typography>
+    </div>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Contact Form Example</h3>
+      
+      <form [formGroup]="contactForm" (ngSubmit)="onContactSubmit()" novalidate>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <willow-input
+              label="First Name"
+              [control]="getControl(contactForm, 'firstName')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(contactForm, 'firstName')"
+              [errorText]="getFieldError(contactForm, 'firstName')"
+              type="text">
+            </willow-input>
+          </div>
+          
+          <div class="col-md-6 mb-3">
+            <willow-input
+              label="Last Name"
+              [control]="getControl(contactForm, 'lastName')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(contactForm, 'lastName')"
+              [errorText]="getFieldError(contactForm, 'lastName')"
+              type="text">
+            </willow-input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <willow-input
+              label="Email Address"
+              [control]="getControl(contactForm, 'email')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(contactForm, 'email')"
+              [errorText]="getFieldError(contactForm, 'email')"
+              type="email">
+            </willow-input>
+          </div>
+          
+          <div class="col-md-6 mb-3">
+            <willow-input
+              label="Phone Number"
+              [control]="getControl(contactForm, 'phone')"
+              [showErrors]="shouldShowErrors(contactForm, 'phone')"
+              [errorText]="getFieldError(contactForm, 'phone')"
+              type="tel"
+              hint="Format: (123) 456-7890">
+            </willow-input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-3">
+            <willow-select
+              label="Inquiry Category"
+              [control]="getControl(contactForm, 'category')"
+              [required]="true"
+              [options]="categoryOptions"
+              [showErrors]="shouldShowErrors(contactForm, 'category')"
+              [errorText]="getFieldError(contactForm, 'category')"
+              placeholder="Select a category">
+            </willow-select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-3">
+            <willow-input
+              label="Subject"
+              [control]="getControl(contactForm, 'subject')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(contactForm, 'subject')"
+              [errorText]="getFieldError(contactForm, 'subject')"
+              type="text">
+            </willow-input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-3">
+            <willow-textarea
+              label="Message"
+              [control]="getControl(contactForm, 'message')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(contactForm, 'message')"
+              [errorText]="getFieldError(contactForm, 'message')"
+              [rows]="5"
+              hint="Please provide details about your inquiry">
+            </willow-textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <willow-button 
+              htmlType="submit" 
+              variant="primary"
+              [disabled]="contactForm.invalid || isSubmitting">
+              {{isSubmitting ? 'Sending...' : 'Send Message'}}
+            </willow-button>
+          </div>
+        </div>
+
+        <div class="mb-3" *ngIf="contactFormMessages.length > 0">
+          <willow-alert [messages]="contactFormMessages" (messageClick)="onMessageClick($event)"></willow-alert>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Survey Form -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Survey Form Example</h3>
+      
+      <form [formGroup]="surveyForm" (ngSubmit)="onSurveySubmit()" novalidate>
+        <div class="row">
+          <div class="col-12 mb-4">
+            <willow-radio
+              label="Overall Satisfaction"
+              [control]="getControl(surveyForm, 'overallSatisfaction')"
+              [required]="true"
+              [options]="satisfactionOptions"
+              [showErrors]="shouldShowErrors(surveyForm, 'overallSatisfaction')"
+              [errorText]="getFieldError(surveyForm, 'overallSatisfaction')">
+            </willow-radio>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-4">
+            <willow-checkbox-list
+              label="Which features do you find most valuable?"
+              [control]="getControl(surveyForm, 'features')"
+              [required]="true"
+              [options]="featureOptions"
+              [showErrors]="shouldShowErrors(surveyForm, 'features')"
+              [errorText]="getFieldError(surveyForm, 'features')">
+            </willow-checkbox-list>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-3">
+            <willow-textarea
+              label="Additional Comments"
+              [control]="getControl(surveyForm, 'comments')"
+              [rows]="4"
+              hint="Any other feedback you'd like to share?">
+            </willow-textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <willow-button 
+              htmlType="submit" 
+              variant="primary"
+              [disabled]="surveyForm.invalid">
+              Submit Survey
+            </willow-button>
+          </div>
+        </div>
+
+        <div class="mb-3" *ngIf="surveyFormMessages.length > 0">
+          <willow-alert [messages]="surveyFormMessages" (messageClick)="onMessageClick($event)"></willow-alert>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Registration Form -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Registration Form Example</h3>
+      
+      <form [formGroup]="registrationForm" (ngSubmit)="onRegistrationSubmit()" novalidate>
+        <div class="row">
+          <div class="col-12 mb-3">
+            <willow-input
+              label="Username"
+              [control]="getControl(registrationForm, 'username')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(registrationForm, 'username')"
+              [errorText]="getFieldError(registrationForm, 'username')"
+              type="text"
+              hint="Must be at least 3 characters">
+            </willow-input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <willow-input
+              label="Email"
+              [control]="getControl(registrationForm, 'email')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(registrationForm, 'email')"
+              [errorText]="getFieldError(registrationForm, 'email')"
+              type="email">
+            </willow-input>
+          </div>
+          
+          <div class="col-md-6 mb-3">
+            <willow-select
+              label="Country"
+              [control]="getControl(registrationForm, 'country')"
+              [required]="true"
+              [options]="countryOptions"
+              [showErrors]="shouldShowErrors(registrationForm, 'country')"
+              [errorText]="getFieldError(registrationForm, 'country')"
+              placeholder="Select your country">
+            </willow-select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <willow-input
+              label="Password"
+              [control]="getControl(registrationForm, 'password')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(registrationForm, 'password')"
+              [errorText]="getFieldError(registrationForm, 'password')"
+              type="password"
+              hint="Must be at least 8 characters">
+            </willow-input>
+          </div>
+          
+          <div class="col-md-6 mb-3">
+            <willow-input
+              label="Confirm Password"
+              [control]="getControl(registrationForm, 'confirmPassword')"
+              [required]="true"
+              [showErrors]="shouldShowErrors(registrationForm, 'confirmPassword')"
+              [errorText]="getFieldError(registrationForm, 'confirmPassword')"
+              type="password">
+            </willow-input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-3">
+            <willow-input
+              label="Birth Date"
+              [control]="getControl(registrationForm, 'birthDate')"
+              type="text"
+              hint="Optional">
+            </willow-input>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12 mb-3">
+            <willow-textarea
+              label="Bio"
+              [control]="getControl(registrationForm, 'bio')"
+              [rows]="3"
+              hint="Tell us a bit about yourself (optional)">
+            </willow-textarea>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <willow-button 
+              htmlType="submit" 
+              variant="primary"
+              [disabled]="registrationForm.invalid">
+              Create Account
+            </willow-button>
+          </div>
+        </div>
+
+        <div class="mb-3" *ngIf="registrationFormMessages.length > 0">
+          <willow-alert [messages]="registrationFormMessages" (messageClick)="onMessageClick($event)"></willow-alert>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Documentation -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Form Component Documentation</h3>
+      
+      <h4 class="heading4 mb-3">Available Components</h4>
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Selector</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Form Input</td>
+              <td><code>willow-input</code></td>
+              <td>Text, email, password, number, and tel inputs</td>
+            </tr>
+            <tr>
+              <td>Form Select</td>
+              <td><code>willow-select</code></td>
+              <td>Dropdown selection from options</td>
+            </tr>
+            <tr>
+              <td>Form Radio</td>
+              <td><code>willow-radio</code></td>
+              <td>Single choice selection from options</td>
+            </tr>
+            <tr>
+              <td>Form Checkbox List</td>
+              <td><code>willow-checkbox-list</code></td>
+              <td>Multiple choice selections</td>
+            </tr>
+            <tr>
+              <td>Form Textarea</td>
+              <td><code>willow-textarea</code></td>
+              <td>Multi-line text input</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="heading4 mb-3 mt-4">Common Properties</h4>
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>label</code></td>
+              <td><code>string</code></td>
+              <td>Field label text</td>
+            </tr>
+            <tr>
+              <td><code>control</code></td>
+              <td><code>FormControl</code></td>
+              <td>Reactive forms control instance</td>
+            </tr>
+            <tr>
+              <td><code>required</code></td>
+              <td><code>boolean</code></td>
+              <td>Marks field as required</td>
+            </tr>
+            <tr>
+              <td><code>showErrors</code></td>
+              <td><code>boolean</code></td>
+              <td>Whether to display validation errors</td>
+            </tr>
+            <tr>
+              <td><code>errorText</code></td>
+              <td><code>string</code></td>
+              <td>Custom error message to display</td>
+            </tr>
+            <tr>
+              <td><code>hint</code></td>
+              <td><code>string</code></td>
+              <td>Helper text below the field</td>
+            </tr>
+            <tr>
+              <td><code>options</code></td>
+              <td><code>string[]</code></td>
+              <td>Available options (for radio, select, checkbox)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div> 

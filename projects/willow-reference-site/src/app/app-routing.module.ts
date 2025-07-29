@@ -11,19 +11,27 @@ import { HomeComponent } from './pages/home/home.component';
 import { DevelopersComponent } from './pages/developers/developers.component';
 import { DesignComponent } from './pages/design/design.component';
 import { RoadmapComponent } from './pages/roadmap/roadmap.component';
+import { AlertComponent } from './pages/alert/alert.component';
+import { ButtonComponent } from './pages/button/button.component';
+import { CardComponent } from './pages/card/card.component';
+import { FormsComponent } from './pages/forms/forms.component';
 
 const routes: Routes = [
   {
     path: '',
     component: MainLayoutComponent,
     children: [
-      { path: '', redirectTo: 'typography', pathMatch: 'full' },
+      { path: '', redirectTo: 'start', pathMatch: 'full' },
+      { path: 'start', component: StartpageComponent },
       { path: 'typography', component: TypographyComponent },
       { path: 'colors', component: ColorpageComponent },
+      { path: 'alert', component: AlertComponent },
+      { path: 'button', component: ButtonComponent },
+      { path: 'card', component: CardComponent },
+      { path: 'forms', component: FormsComponent },
+      { path: 'tables', component: TablesComponent },
       { path: 'threaded-messages', component: ThreadedMessagesPageComponent },
       { path: 'about', component: AboutpageComponent },
-      { path: 'tables', component: TablesComponent },
-      { path: 'start', component: StartpageComponent },
       { path: 'home', component: HomeComponent },
       { path: 'developers', component: DevelopersComponent },
       { path: 'design', component: DesignComponent },

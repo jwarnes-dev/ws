@@ -1,0 +1,122 @@
+<div class="container-fluid">
+  <h1 class="heading1 pt-4 pb-4" style="color: #4A7390;">Alert Component</h1>
+  
+  <div class="row">
+    <div class="col-12">
+      <willow-typography [variant]="type.Body">
+        The Alert component provides contextual feedback messages for typical user actions with a handful of available and flexible alert messages.
+      </willow-typography>
+    </div>
+  </div>
+
+  <!-- Basic Examples -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Basic Example</h3>
+      
+      <!-- Success Alert -->
+      <div class="mb-3">
+        <willow-alert [messages]="errorMessages" (messageClick)="onMessageClick($event)"></willow-alert>
+      </div>
+
+    </div>
+  </div>
+  <!-- Usage Documentation -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Usage</h3>
+      
+      <willow-typography [variant]="type.Body">
+        <p>Import the component in your module and use it in your templates:</p>
+      </willow-typography>
+
+      <pre class="code-block p-3 my-3 bg-light"><code class="language-typescript">import &#123; AngularWillowModule &#125; from '&#64;wellmark/angular-willow';</code></pre>
+
+      <willow-typography [variant]="type.Body">
+        <p>Basic usage:</p>
+      </willow-typography>
+
+      <pre class="code-block p-3 my-3 bg-light"><code class="language-html">&lt;willow-alert [messages]="alertMessages" (messageClick)="onMessageClick($event)"&gt;&lt;/willow-alert&gt;
+
+// Component
+alertMessages: ValidationMessage[] = [
+  &#123; controlName: 'success', message: 'Success! Your action was completed successfully.' &#125;
+];</code></pre>
+    </div>
+  </div>
+
+  <!-- Props Documentation -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4 class="heading4 mb-3">Properties</h4>
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>messages</code></td>
+              <td><code>ValidationMessage[]</code></td>
+              <td><code>[]</code></td>
+              <td>Array of alert messages to display</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="heading4 mb-3 mt-4">Events</h4>
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>messageClick</code></td>
+              <td><code>EventEmitter&lt;ValidationMessage&gt;</code></td>
+              <td>Emitted when a message in the alert is clicked</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="heading4 mb-3 mt-4">ValidationMessage Interface</h4>
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>controlName</code></td>
+              <td><code>string</code></td>
+              <td>The name/identifier for the control or alert type</td>
+            </tr>
+            <tr>
+              <td><code>message</code></td>
+              <td><code>string</code></td>
+              <td>The message text to display in the alert</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div> 

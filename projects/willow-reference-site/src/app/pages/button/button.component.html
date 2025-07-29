@@ -1,0 +1,169 @@
+<div class="container-fluid">
+  <h1 class="heading1 pt-4 pb-4" style="color: #4A7390;">Button Component</h1>
+  
+  <div class="row">
+    <div class="col-12">
+      <willow-typography [variant]="type.Body">
+        The Button component provides a customizable button element with various styles, sizes, and states to fit your application's needs.
+      </willow-typography>
+    </div>
+  </div>
+
+  <!-- Button Variants -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Button Variants</h3>
+      
+      <div class="d-flex flex-wrap gap-3 mb-4">
+        <willow-button variant="primary" (click)="onButtonClick('Primary')">
+          Primary
+        </willow-button>
+        
+        <willow-button variant="secondary" (click)="onButtonClick('Secondary')">
+          Secondary
+        </willow-button>
+        
+        <willow-button variant="tertiary" (click)="onButtonClick('Tertiary')">
+          Tertiary
+        </willow-button>
+        
+        <willow-button variant="primary" [destructive]="true" (click)="onButtonClick('Destructive')">
+          Destructive
+        </willow-button>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <!-- Button States -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4 class="heading4 mb-3">Button States</h4>
+      
+      <div class="d-flex flex-wrap gap-3 mb-4">
+        <willow-button 
+          variant="primary" 
+          (click)="onButtonClick('Normal')">
+          Normal State
+        </willow-button>
+        
+        <willow-button 
+          variant="secondary" 
+          [disabled]="isDisabled"
+          (click)="onButtonClick('Disabled Test')">
+          {{isDisabled ? 'Disabled' : 'Enabled'}}
+        </willow-button>
+        
+        <willow-button 
+          variant="tertiary" 
+          (click)="toggleDisabled()">
+          Toggle Disabled State
+        </willow-button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Usage Documentation -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="heading3 mb-4" style="color: #4A7390;">Usage</h3>
+      
+      <willow-typography [variant]="type.Body">
+        <p>Import the component in your module and use it in your templates:</p>
+      </willow-typography>
+
+      <pre class="code-block p-3 my-3 bg-light"><code class="language-typescript">import &#123; AngularWillowModule &#125; from '&#64;wellmark/angular-willow';</code></pre>
+
+      <willow-typography [variant]="type.Body">
+        <p>Basic usage:</p>
+      </willow-typography>
+
+      <pre class="code-block p-3 my-3 bg-light"><code class="language-html">&lt;!-- Basic button --&gt;
+&lt;willow-button variant="primary" (click)="onSubmit()"&gt;
+  Submit
+&lt;/willow-button&gt;
+
+&lt;!-- Destructive button --&gt;
+&lt;willow-button variant="primary" [destructive]="true" (click)="onDelete()"&gt;
+  Delete
+&lt;/willow-button&gt;
+
+&lt;!-- Disabled button --&gt;
+&lt;willow-button 
+  variant="primary" 
+  [disabled]="!isValid"
+  (click)="onSubmit()"&gt;
+  Save
+&lt;/willow-button&gt;</code></pre>
+    </div>
+  </div>
+
+  <!-- Props Documentation -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4 class="heading4 mb-3">Properties</h4>
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>variant</code></td>
+              <td><code>'primary' | 'secondary' | 'tertiary'</code></td>
+              <td><code>'primary'</code></td>
+              <td>The visual style variant of the button</td>
+            </tr>
+            <tr>
+              <td><code>htmlType</code></td>
+              <td><code>'button' | 'submit' | 'reset'</code></td>
+              <td><code>'button'</code></td>
+              <td>The native HTML button type</td>
+            </tr>
+            <tr>
+              <td><code>disabled</code></td>
+              <td><code>boolean</code></td>
+              <td><code>false</code></td>
+              <td>Whether the button is disabled</td>
+            </tr>
+            <tr>
+              <td><code>destructive</code></td>
+              <td><code>boolean</code></td>
+              <td><code>false</code></td>
+              <td>Whether to apply destructive styling</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4 class="heading4 mb-3 mt-4">Events</h4>
+      
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Event</th>
+              <th>Type</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>click</code></td>
+              <td><code>EventEmitter&lt;MouseEvent&gt;</code></td>
+              <td>Emitted when the button is clicked</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div> 

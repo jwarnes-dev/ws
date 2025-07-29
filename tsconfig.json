@@ -2,11 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "paths": {
-      "angular-willow": [
-        "dist/angular-willow"
-      ]
-    },
+    "paths": {},
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

@@ -1,0 +1,32 @@
+.code-block {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.code-block code {
+  color: #6f42c1;
+  background: transparent;
+}
+
+.table-responsive {
+  margin-top: 1rem;
+}
+
+.table th {
+  border-top: none;
+  font-weight: 600;
+  color: #4A7390;
+}
+
+.btn {
+  background-color: #4A7390;
+  border-color: #4A7390;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #3a5a73;
+  border-color: #3a5a73;
+} 
