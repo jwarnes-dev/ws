@@ -28,18 +28,6 @@ nvm install 18.19.0
 nvm use 18.19.0
 \`\`\`
 
-#### Installing NVM (macOS/Linux)
-
-\`\`\`bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
-# Restart your terminal or run:
-source ~/.bashrc
-
-# Install and use Node.js
-nvm install 18.19.0
-nvm use 18.19.0
-\`\`\`
-
 ## Installation
 
 ### Install the Angular Willow Library
