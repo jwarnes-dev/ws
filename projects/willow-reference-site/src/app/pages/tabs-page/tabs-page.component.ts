@@ -279,39 +279,39 @@ export class TabsPageComponent {
   basicExample = `<willow-tabs
   [tabs]="basicTabs"
   [selectedTabId]="selectedBasicTabId"
-  (tabSelected)="onBasicTabChange($event)">
+  (selectedTabChange)="onBasicTabChange($event)">
 </willow-tabs>`;
 
   iconExample = `<willow-tabs
   [tabs]="iconTabs"
   [selectedTabId]="selectedIconTabId"
-  (tabSelected)="onIconTabChange($event)">
+  (selectedTabChange)="onIconTabChange($event)">
 </willow-tabs>`;
 
   verticalExample = `<willow-tabs
   [tabs]="verticalTabs"
   [selectedTabId]="selectedVerticalTabId"
   orientation="vertical"
-  (tabSelected)="onVerticalTabChange($event)">
+  (selectedTabChange)="onVerticalTabChange($event)">
 </willow-tabs>`;
 
   manualExample = `<willow-tabs
   [tabs]="manualTabs"
   [selectedTabId]="selectedManualTabId"
   activationMode="manual"
-  (tabSelected)="onManualTabChange($event)">
+  (selectedTabChange)="onManualTabChange($event)">
 </willow-tabs>`;
 
   templateExample = `<willow-tabs
   [tabs]="templateTabs"
   [selectedTabId]="selectedTemplateTabId"
-  (tabSelected)="onTemplateTabChange($event)">
+  (selectedTabChange)="onTemplateTabChange($event)">
 </willow-tabs>`;
 
   disabledExample = `<willow-tabs
   [tabs]="disabledTabs"
   [selectedTabId]="selectedDisabledTabId"
-  (tabSelected)="onDisabledTabChange($event)">
+  (selectedTabChange)="onDisabledTabChange($event)">
 </willow-tabs>`;
 
   customHtmlExample = `<div class="willow-tabs" role="tablist">
