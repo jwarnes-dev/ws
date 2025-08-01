@@ -1,0 +1,192 @@
+.tabs-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--willow-spacing-lg);
+}
+
+.page-header {
+  margin-bottom: var(--willow-spacing-xl);
+  text-align: center;
+
+  h1 {
+    color: var(--willow-color-primary-600);
+    margin-bottom: var(--willow-spacing-sm);
+  }
+
+  .lead {
+    font-size: var(--willow-font-size-lg);
+    color: var(--willow-color-neutral-600);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.example-section {
+  margin-bottom: var(--willow-spacing-2xl);
+  
+  h2 {
+    color: var(--willow-color-neutral-800);
+    margin-bottom: var(--willow-spacing-sm);
+    font-size: var(--willow-font-size-xl);
+  }
+
+  > p {
+    color: var(--willow-color-neutral-600);
+    margin-bottom: var(--willow-spacing-lg);
+  }
+}
+
+.example-demo {
+  background: var(--willow-color-neutral-50);
+  border: 1px solid var(--willow-color-neutral-200);
+  border-radius: var(--willow-border-radius-md);
+  padding: var(--willow-spacing-lg);
+  margin-bottom: var(--willow-spacing-md);
+}
+
+.code-example {
+  margin-top: var(--willow-spacing-md);
+  
+  summary {
+    cursor: pointer;
+    padding: var(--willow-spacing-sm);
+    background: var(--willow-color-neutral-100);
+    border: 1px solid var(--willow-color-neutral-200);
+    border-radius: var(--willow-border-radius-sm);
+    font-weight: var(--willow-font-weight-medium);
+    
+    &:hover {
+      background: var(--willow-color-neutral-200);
+    }
+  }
+
+  pre {
+    margin: 0;
+    margin-top: var(--willow-spacing-sm);
+    padding: var(--willow-spacing-md);
+    background: var(--willow-color-neutral-900);
+    color: var(--willow-color-neutral-100);
+    border-radius: var(--willow-border-radius-sm);
+    overflow-x: auto;
+    font-size: var(--willow-font-size-sm);
+    line-height: 1.5;
+
+    code {
+      font-family: 'Courier New', monospace;
+      white-space: pre;
+    }
+  }
+}
+
+// Custom theme example
+.custom-theme {
+  --willow-tabs-bg: var(--willow-color-primary-50);
+  --willow-tabs-border: var(--willow-color-primary-200);
+  --willow-tab-color: var(--willow-color-primary-700);
+  --willow-tab-color-hover: var(--willow-color-primary-800);
+  --willow-tab-color-active: var(--willow-color-primary-900);
+  --willow-tab-bg-active: var(--willow-color-primary-100);
+  --willow-tab-border-active: var(--willow-color-primary-300);
+  --willow-tab-panel-bg: var(--willow-color-primary-25);
+  --willow-tab-panel-border: var(--willow-color-primary-200);
+}
+
+.accessibility-section {
+  background: var(--willow-color-blue-50);
+  border: 1px solid var(--willow-color-blue-200);
+  border-radius: var(--willow-border-radius-lg);
+  padding: var(--willow-spacing-xl);
+  margin-top: var(--willow-spacing-2xl);
+
+  h2 {
+    color: var(--willow-color-blue-800);
+    margin-bottom: var(--willow-spacing-lg);
+  }
+}
+
+.accessibility-grid {
+  display: grid;
+  gap: var(--willow-spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.accessibility-card {
+  background: var(--willow-color-white);
+  border: 1px solid var(--willow-color-blue-200);
+  border-radius: var(--willow-border-radius-md);
+  padding: var(--willow-spacing-lg);
+
+  h3 {
+    color: var(--willow-color-blue-700);
+    margin-bottom: var(--willow-spacing-md);
+    font-size: var(--willow-font-size-lg);
+  }
+
+  ul {
+    margin: 0;
+    padding-left: var(--willow-spacing-lg);
+
+    li {
+      margin-bottom: var(--willow-spacing-xs);
+      color: var(--willow-color-neutral-700);
+    }
+  }
+
+  kbd {
+    background: var(--willow-color-neutral-100);
+    border: 1px solid var(--willow-color-neutral-300);
+    border-radius: var(--willow-border-radius-sm);
+    padding: 2px 6px;
+    font-family: monospace;
+    font-size: var(--willow-font-size-sm);
+    font-weight: var(--willow-font-weight-medium);
+  }
+}
+
+.template-content {
+  .button-group {
+    display: flex;
+    gap: var(--willow-spacing-sm);
+    margin-top: var(--willow-spacing-md);
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .tabs-page {
+    padding: var(--willow-spacing-md);
+  }
+
+  .page-header {
+    h1 {
+      font-size: var(--willow-font-size-2xl);
+    }
+
+    .lead {
+      font-size: var(--willow-font-size-base);
+    }
+  }
+
+  .example-demo {
+    padding: var(--willow-spacing-md);
+  }
+
+  .accessibility-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .template-content .button-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-example pre {
+    font-size: var(--willow-font-size-xs);
+    padding: var(--willow-spacing-sm);
+  }
+
+  .accessibility-card {
+    padding: var(--willow-spacing-md);
+  }
+}

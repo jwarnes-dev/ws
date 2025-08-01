@@ -1,0 +1,262 @@
+<div class="tabs-page">
+  <div class="page-header">
+    <h1>Tabs Component</h1>
+    <p class="lead">Interactive and accessible tab components with support for icons, custom content, and multiple orientations.</p>
+  </div>
+
+  <section class="example-section">
+    <h2>Basic Tabs</h2>
+    <p>Simple horizontal tabs with text labels and HTML content.</p>
+    
+    <div class="example-demo">
+      <willow-tabs
+        [tabs]="basicTabs"
+        [selectedTabId]="selectedBasicTabId"
+        (selectedTabChange)="onBasicTabChange($event)">
+      </willow-tabs>
+    </div>
+
+    <details class="code-example">
+      <summary>View Code</summary>
+      <pre><code>{{basicExample}}</code></pre>
+    </details>
+  </section>
+
+  <section class="example-section">
+    <h2>Tabs with Icons</h2>
+    <p>Tabs enhanced with FontAwesome icons for better visual hierarchy.</p>
+    
+    <div class="example-demo">
+      <willow-tabs
+        [tabs]="iconTabs"
+        [selectedTabId]="selectedIconTabId"
+        (tabSelected)="onIconTabChange($event)">
+      </willow-tabs>
+    </div>
+
+    <details class="code-example">
+      <summary>View Code</summary>
+      <pre><code>{{iconExample}}</code></pre>
+    </details>
+  </section>
+
+  <section class="example-section">
+    <h2>Vertical Tabs</h2>
+    <p>Tabs arranged vertically for sidebar navigation or narrow layouts.</p>
+    
+    <div class="example-demo">
+      <willow-tabs
+        [tabs]="verticalTabs"
+        [selectedTabId]="selectedVerticalTabId"
+        orientation="vertical"
+        (tabSelected)="onVerticalTabChange($event)">
+      </willow-tabs>
+    </div>
+
+    <details class="code-example">
+      <summary>View Code</summary>
+      <pre><code>{{verticalExample}}</code></pre>
+    </details>
+  </section>
+
+  <section class="example-section">
+    <h2>Manual Tab Activation</h2>
+    <p>Tabs that require explicit selection (click or Enter/Space) instead of automatic focus activation.</p>
+    
+    <div class="example-demo">
+      <willow-tabs
+        [tabs]="manualTabs"
+        [selectedTabId]="selectedManualTabId"
+        activationMode="manual"
+        (tabSelected)="onManualTabChange($event)">
+      </willow-tabs>
+    </div>
+
+    <details class="code-example">
+      <summary>View Code</summary>
+      <pre><code>{{manualExample}}</code></pre>
+    </details>
+  </section>
+
+  <section class="example-section">
+    <h2>Tabs with Template Content</h2>
+    <p>Using Angular templates for complex tab content with dynamic data binding.</p>
+    
+    <div class="example-demo">
+      <willow-tabs
+        [tabs]="templateTabs"
+        [selectedTabId]="selectedTemplateTabId"
+        (tabSelected)="onTemplateTabChange($event)">
+      </willow-tabs>
+    </div>
+
+    <details class="code-example">
+      <summary>View Code</summary>
+      <pre><code>{{templateExample}}</code></pre>
+    </details>
+  </section>
+
+  <section class="example-section">
+    <h2>Disabled Tabs</h2>
+    <p>Tabs can be disabled to prevent user interaction when content is not available.</p>
+    
+    <div class="example-demo">
+      <willow-tabs
+        [tabs]="disabledTabs"
+        [selectedTabId]="selectedDisabledTabId"
+        (tabSelected)="onDisabledTabChange($event)">
+      </willow-tabs>
+    </div>
+
+    <details class="code-example">
+      <summary>View Code</summary>
+      <pre><code>{{disabledExample}}</code></pre>
+    </details>
+  </section>
+
+  <section class="example-section">
+    <h2>Custom HTML Implementation</h2>
+    <p>Build your own tabs using the Willow CSS classes without the Angular component.</p>
+    
+    <div class="example-demo">
+      <div class="willow-tabs" role="tablist" aria-label="Custom tabs example">
+        <button 
+          class="willow-tab" 
+          [class.willow-tab--active]="customSelectedTab === 'custom1'"
+          role="tab" 
+          [attr.aria-selected]="customSelectedTab === 'custom1'"
+          [attr.aria-controls]="'custom1-panel'"
+          id="custom1-tab"
+          (click)="customSelectedTab = 'custom1'">
+          <fa-icon [icon]="faCode"></fa-icon>
+          Custom Tab 1
+        </button>
+        <button 
+          class="willow-tab" 
+          [class.willow-tab--active]="customSelectedTab === 'custom2'"
+          role="tab" 
+          [attr.aria-selected]="customSelectedTab === 'custom2'"
+          [attr.aria-controls]="'custom2-panel'"
+          id="custom2-tab"
+          (click)="customSelectedTab = 'custom2'">
+          <fa-icon [icon]="faHeart"></fa-icon>
+          Custom Tab 2
+        </button>
+      </div>
+      
+      <div class="willow-tab-panels">
+        <div 
+          class="willow-tab-panel" 
+          [class.willow-tab-panel--active]="customSelectedTab === 'custom1'"
+          role="tabpanel" 
+          id="custom1-panel"
+          [attr.aria-labelledby]="'custom1-tab'">
+          <h3>Custom Implementation</h3>
+          <p>This tab panel is built using raw HTML and Willow CSS classes.</p>
+          <p>You have full control over the markup and can add any custom functionality.</p>
+        </div>
+        <div 
+          class="willow-tab-panel" 
+          [class.willow-tab-panel--active]="customSelectedTab === 'custom2'"
+          role="tabpanel" 
+          id="custom2-panel"
+          [attr.aria-labelledby]="'custom2-tab'">
+          <h3>Full Flexibility</h3>
+          <p>Custom HTML allows for unique layouts and interactions that might not be possible with the component.</p>
+          <ul>
+            <li>Custom event handling</li>
+            <li>Complex animations</li>
+            <li>Nested interactive elements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <details class="code-example">
+      <summary>View Code</summary>
+      <pre><code>{{customHtmlExample}}</code></pre>
+    </details>
+  </section>
+
+  <section class="example-section">
+    <h2>CSS Customization</h2>
+    <p>Override CSS custom properties to customize the appearance and spacing of tabs.</p>
+    
+    <div class="example-demo custom-theme">
+      <willow-tabs
+        [tabs]="basicTabs"
+        [selectedTabId]="selectedBasicTabId"
+        (tabSelected)="onBasicTabChange($event)">
+      </willow-tabs>
+    </div>
+
+    <details class="code-example">
+      <summary>View CSS Override Code</summary>
+      <pre><code>{{cssCustomizationExample}}</code></pre>
+    </details>
+  </section>
+
+  <section class="accessibility-section">
+    <h2>Accessibility Information</h2>
+    
+    <div class="accessibility-grid">
+      <div class="accessibility-card">
+        <h3>Keyboard Navigation</h3>
+        <ul>
+          <li><kbd>Tab</kbd> - Focus tab list</li>
+          <li><kbd>Arrow Keys</kbd> - Navigate between tabs</li>
+          <li><kbd>Home</kbd> - Jump to first tab</li>
+          <li><kbd>End</kbd> - Jump to last tab</li>
+          <li><kbd>Enter/Space</kbd> - Activate tab (manual mode)</li>
+        </ul>
+      </div>
+
+      <div class="accessibility-card">
+        <h3>Screen Reader Support</h3>
+        <ul>
+          <li>Proper ARIA roles and attributes</li>
+          <li>Tab list announced as navigation</li>
+          <li>Active tab state communicated</li>
+          <li>Panel content associated with tabs</li>
+        </ul>
+      </div>
+
+      <div class="accessibility-card">
+        <h3>WCAG 2.1 AA Compliance</h3>
+        <ul>
+          <li>4.5:1 contrast ratio for text</li>
+          <li>3:1 contrast for focus indicators</li>
+          <li>Minimum 44px touch targets</li>
+          <li>No content lost at 200% zoom</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hidden templates for template-based tabs -->
+  <ng-template #customTemplate1>
+    <div class="template-content">
+      <h3>Dynamic Template Content</h3>
+      <p>Current time: {{currentTime | date:'medium'}}</p>
+      <p>This content is rendered from an Angular template with data binding.</p>
+      <button class="willow-button willow-button--primary" (click)="updateTime()">
+        Update Time
+      </button>
+    </div>
+  </ng-template>
+
+  <ng-template #customTemplate2>
+    <div class="template-content">
+      <h3>Interactive Template</h3>
+      <p>Counter value: {{counter}}</p>
+      <div class="button-group">
+        <button class="willow-button willow-button--secondary" (click)="decrementCounter()">
+          Decrement
+        </button>
+        <button class="willow-button willow-button--primary" (click)="incrementCounter()">
+          Increment
+        </button>
+      </div>
+    </div>
+  </ng-template>
+</div>

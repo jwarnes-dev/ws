@@ -15,6 +15,7 @@ import { AlertComponent } from './pages/alert/alert.component';
 import { ButtonComponent } from './pages/button/button.component';
 import { CardComponent } from './pages/card/card.component';
 import { FormsComponent } from './pages/forms/forms.component';
+import { TabsPageComponent } from './pages/tabs-page/tabs-page.component';
 
 const routes: Routes = [
   {
@@ -30,6 +31,7 @@ const routes: Routes = [
       { path: 'card', component: CardComponent },
       { path: 'forms', component: FormsComponent },
       { path: 'tables', component: TablesComponent },
+      { path: 'tabs', component: TabsPageComponent },
       { path: 'threaded-messages', component: ThreadedMessagesPageComponent },
       { path: 'about', component: AboutpageComponent },
       { path: 'home', component: HomeComponent },
